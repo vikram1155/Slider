@@ -25,6 +25,7 @@ function PasswordCheck({
       setPasswordCheck("no");
     }
   };
+
   return (
     <Box
       sx={{

@@ -18,6 +18,7 @@ import Description3 from "./components/Description3";
 import Description4 from "./components/Description4";
 import Description5 from "./components/Description5";
 import PasswordCheck from "./components/PasswordCheck";
+import Description6 from "./components/Description6";
 
 function Layout({ children }) {
   return (
@@ -229,6 +230,16 @@ function App() {
               <Layout>
                 <Description5 />
               </Layout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/agremendu"
+          element={
+            <ProtectedRoute passwordCheck={passwordCheck}>
+              {/* <Layout> */}
+              <Description6 />
+              {/* </Layout> */}
             </ProtectedRoute>
           }
         />

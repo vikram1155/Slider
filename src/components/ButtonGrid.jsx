@@ -93,7 +93,22 @@ function ButtonGrid() {
       >
         Other<br></br>Links<br></br>😁
       </CustomButton>
-      
+
+      <CustomButton
+        size="12px"
+        onClick={() => navigate("/agremendu")}
+        sx={{
+          width: "100px",
+          borderRadius: "100%",
+          padding: "16px 8px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifySelf: "left",
+        }}
+      >
+        Sign<br></br>Pannunga<br></br>✍🏻
+      </CustomButton>
     </Box>
   );
 }
