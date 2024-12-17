@@ -19,8 +19,10 @@ import Description4 from "./components/Description4";
 import Description5 from "./components/Description5";
 import PasswordCheck from "./components/PasswordCheck";
 import Description6 from "./components/Description6";
+import CustomButton from "./usableComponents/CustomButton";
 
 function Layout({ children }) {
+  const navigate = useNavigate();
   return (
     <Box
       sx={{
@@ -34,6 +36,25 @@ function Layout({ children }) {
       }}
     >
       {children}
+      {children.type.name !== "Loader" &&
+        children.type.name !== "PasswordCheck" && (
+          <Box
+            sx={{
+              width: "100%",
+              position: "fixed",
+              bottom: "0",
+              padding: "20px",
+              background: "#fff",
+              display: "flex",
+              justifyContent: "center",
+              zIndex: 100,
+            }}
+          >
+            <CustomButton onClick={() => navigate("/vaa-di-booshu")}>
+              Home page ku pogavum
+            </CustomButton>
+          </Box>
+        )}
     </Box>
   );
 }
@@ -67,86 +88,7 @@ function App() {
   const [passwordCheck, setPasswordCheck] = useState(false);
   const [passwordEntered, setPasswordEntered] = useState("");
 
-  console.log("a-passwordCheck", passwordCheck);
   return (
-    // <Router>
-    //   {passwordCheck === "yes" ? (
-    //     <Routes>
-    //       <Route
-    //         path="/vaa-di-booshu"
-    //         element={
-    //           <Layout>
-    //             <HomePage />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/page1"
-    //         element={
-    //           <Layout>
-    //             <Description1 />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/aginii-siragee-elunthu-vaaa"
-    //         element={
-    //           <Layout>
-    //             <Description2 />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/reassurance"
-    //         element={
-    //           <Layout>
-    //             <Description3 />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/bujukku"
-    //         element={
-    //           <Layout>
-    //             <Description4 />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/uruttugal"
-    //         element={
-    //           <Layout>
-    //             <Description5 />
-    //           </Layout>
-    //         }
-    //       />
-    //     </Routes>
-    //   ) : (
-    //     <Routes>
-    //       <Route
-    //         path="/"
-    //         element={
-    //           <Layout>
-    //             <Loader showLoader={showLoader} />
-    //           </Layout>
-    //         }
-    //       />
-    //       <Route
-    //         path="/fbi-open-up"
-    //         element={
-    //           <Layout>
-    //             <PasswordCheck
-    //               passwordCheck={passwordCheck}
-    //               setPasswordCheck={setPasswordCheck}
-    //               passwordEntered={passwordEntered}
-    //               setPasswordEntered={setPasswordEntered}
-    //             />
-    //           </Layout>
-    //         }
-    //       />
-    //     </Routes>
-    //   )}
-    // </Router>
     <Router>
       <Routes>
         {/* Routes that are always accessible */}
@@ -237,9 +179,9 @@ function App() {
           path="/agremendu"
           element={
             <ProtectedRoute passwordCheck={passwordCheck}>
-              {/* <Layout> */}
-              <Description6 />
-              {/* </Layout> */}
+              <Layout>
+                <Description6 />
+              </Layout>
             </ProtectedRoute>
           }
         />

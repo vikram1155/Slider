@@ -134,7 +134,7 @@ function Description4() {
       })
     );
   };
-  console.log("a-b", buttonArray);
+
   return (
     <Box
       sx={{

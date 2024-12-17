@@ -4,9 +4,11 @@ import CustomButton from "../usableComponents/CustomButton";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import Signature from "../assets/Signature.png";
+import ShakingHands from "../assets/ShakingHands.png";
 import CustomTypography from "../usableComponents/CustomTypography";
 
 function Description6() {
+  const [done, setDone] = useState(false);
   const [formValues, setFormValues] = useState({
     enPeru: "Vikram S",
     enVayasu: "25",
@@ -79,6 +81,7 @@ function Description6() {
       pdf.addImage(imgData, "PNG", 0, 0, pdfWidth, pdfHeight);
       pdf.save("VM-Agreement.pdf");
     }
+    setDone(true);
   };
 
   //   CSS
@@ -98,6 +101,7 @@ function Description6() {
         flexDirection: "column",
         alignItems: "center",
         padding: "50px",
+        height: "100%",
       }}
     >
       <Container maxWidth="md">
@@ -243,7 +247,6 @@ function Description6() {
           position: "relative",
           width: "100%",
           maxWidth: 600,
-          border: "1px solid #000",
           margin: "auto",
         }}
       >
@@ -265,11 +268,12 @@ function Description6() {
           <CustomTypography
             sx={{ padding: "0 30px 30px", textAlign: "center" }}
           >
-            Yen, Ethuku lam qusetion kekama.. form a filling panni sumbit
-            pannunga boomchu!{" "}
+            {done
+              ? "Shoooppparr Daa boomchu!"
+              : "Yen, Ethuku lam qusetion kekama.. form a filling panni sumbit pannunga boomchu!"}
           </CustomTypography>{" "}
           <img
-            src={Signature}
+            src={done ? ShakingHands : Signature}
             alt="Overlay"
             style={{
               width: "90%",
