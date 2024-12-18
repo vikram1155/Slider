@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useState } from "react";
 import CustomTypography from "../usableComponents/CustomTypography";
 import CustomButton from "../usableComponents/CustomButton";
@@ -14,7 +14,7 @@ function Description4() {
       top: "0px",
       right: "auto",
       bottom: "auto",
-      left: "0px",
+    left: "0px",
     },
     {
       id: 2,

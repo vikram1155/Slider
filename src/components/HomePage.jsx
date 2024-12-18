@@ -1,14 +1,22 @@
-import { Box, Button, Input, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { Box } from "@mui/material";
+import React, { useEffect, useMemo, useState } from "react";
 import CustomTypography from "../usableComponents/CustomTypography";
 import ButtonGrid from "./ButtonGrid";
 import legoBatman from "../assets/lego-batman.mp4";
-import CustomButton from "../usableComponents/CustomButton";
 
 function HomePage() {
-  const yessDate = new Date("December 23, 2023 11:45:00 GMT+0530");
-  const firstMeetDate = new Date("May 11, 2018 16:30:00 GMT+0530");
-  const firstDayDate = new Date("Sep 25, 2024 12:30:00 GMT+0530");
+  const yessDate = useMemo(
+    () => new Date("December 23, 2023 11:45:00 GMT+0530"),
+    []
+  );
+  const firstMeetDate = useMemo(
+    () => new Date("May 11, 2018 16:30:00 GMT+0530"),
+    []
+  );
+  const firstDayDate = useMemo(
+    () => new Date("Sep 25, 2024 12:30:00 GMT+0530"),
+    []
+  );
 
   const [timeDiffYess, setTimeDiffYess] = useState({});
   const [timeDiffFirstMeet, setTimeDiffFirstMeet] = useState({});
@@ -23,7 +31,6 @@ function HomePage() {
     const secs = Math.floor((diff % (1000 * 60)) / 1000);
     return { days, hours, mins, secs };
   };
-
   useEffect(() => {
     const interval = setInterval(() => {
       setTimeDiffYess(calculateTimeDifference(yessDate));
@@ -32,7 +39,7 @@ function HomePage() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [yessDate, firstMeetDate, firstDayDate]);
 
   return (
     <Box sx={{ height: "100vh", width: "100%", alignContent: "center" }}>
@@ -75,7 +82,7 @@ function HomePage() {
                 controls
                 autoPlay
                 loop
-                muted={false} // Set to false to enable sound
+                muted={false}
                 style={{ display: "block" }}
               >
                 <source src={legoBatman} type="video/mp4" />

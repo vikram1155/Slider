@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
-import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../usableComponents/CustomButton";
 

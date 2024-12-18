@@ -61,20 +61,12 @@ function Layout({ children }) {
 
 const ProtectedRoute = ({ children, passwordCheck }) => {
   const passwordEnteredFromLocal = localStorage.getItem("password");
-  // Redirect to '/' or '/fbi-open-up' if the user isn't authenticated
   if (passwordEnteredFromLocal !== "VM070999") {
     return (
-      <Navigate
-        to={
-          "/"
-          // passwordCheck === "no" ? "/" : "/fbi-open-up"
-        }
-        replace
-      />
+      <Navigate to={passwordCheck === "no" ? "/" : "/fbi-open-up"} replace />
     );
   }
 
-  // Render children if authenticated
   return children;
 };
 

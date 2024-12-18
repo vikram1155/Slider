@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import OKKanmani from "../assets/OKKanmani.mp3";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import { Box } from "@mui/material";
@@ -192,15 +191,6 @@ function Description1() {
       >
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
-            {/* <img
-              srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-              src={`${item.img}?w=161&fit=crop&auto=format`}
-              alt={item.title}
-              loading="lazy"
-              style={{
-                transform: "scale(1.1)",
-              }}
-            /> */}
             <Box
               component="img"
               srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
@@ -208,14 +198,14 @@ function Description1() {
               alt={item.title}
               loading="lazy"
               sx={{
-                transition: "transform 0.3s ease-in-out", // Smooth transition
+                transition: "transform 0.3s ease-in-out",
                 "&:hover": {
-                  transform: "scale(1.1)", // Scale on hover
+                  transform: "scale(1.1)",
                 },
-                borderRadius: "8px", // Optional: Add rounded corners
-                display: "block", // Ensure it's treated as a block-level element
-                width: "90%", // Adjust to container width
-                height: "auto", // Maintain aspect ratio
+                borderRadius: "8px",
+                display: "block",
+                width: "90%",
+                height: "auto",
                 cursor: "pointer",
               }}
             />

@@ -1,12 +1,9 @@
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import loader1 from "../assets/loader1.png";
 import loader2 from "../assets/loader2.png";
 import loader3 from "../assets/loader3.png";
 import angryLuvey from "../assets/angryLuvey.png";
-import ClickHere from "../assets/clickHere.png";
-import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../usableComponents/CustomButton";
 import CustomTypography from "../usableComponents/CustomTypography";
@@ -27,12 +24,11 @@ function Loader({ showLoader }) {
     };
 
     const animateImage = () => {
-      setScale(1.1); // Enlarge initially
+      setScale(1.1);
       setTimeout(() => {
-        setScale(1); // Shrink back to original
+        setScale(1);
       }, 1000);
 
-      // Repeat the animation every 3 seconds
       const interval = setInterval(() => {
         setScale(1.1);
         setTimeout(() => {
@@ -40,7 +36,7 @@ function Loader({ showLoader }) {
         }, 1000);
       }, 2000);
 
-      return () => clearInterval(interval); // Cleanup on unmount
+      return () => clearInterval(interval);
     };
 
     updateLoadingImage();
@@ -51,18 +47,12 @@ function Loader({ showLoader }) {
   const handleButtonClick = () => {
     setShowAngryLuveyImage(true);
     setTimeout(() => {
-      //   setShowAngryLuveyImage(false);
-      //   navigate("/vaa-di-booshu");
       navigate("/fbi-open-up");
     }, 5000);
   };
 
   return (
-    <Box
-      display="flex"
-      justifyContent="center"
-      //   sx={{ height: "100vh", width: "100%", alignContent: "center" }}
-    >
+    <Box display="flex" justifyContent="center">
       {showLoader ? (
         <Box
           sx={{
@@ -117,7 +107,6 @@ function Loader({ showLoader }) {
         <Box
           sx={{
             display: "flex",
-            // height: "300px",
             justifyContent: "center",
           }}
         >
@@ -125,8 +114,6 @@ function Loader({ showLoader }) {
             variant="outlined"
             onClick={handleButtonClick}
             sx={{
-              //   color: "red",
-              //   border: "1px solid red",
               animation: "pulse 3s infinite",
               "@keyframes pulse": {
                 "0%": {

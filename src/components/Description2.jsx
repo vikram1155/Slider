@@ -1,7 +1,6 @@
 import React from "react";
 import loader3 from "../assets/loader3.png";
 import { Box } from "@mui/material";
-import { Filter } from "@mui/icons-material";
 
 function Description2() {
   return (
