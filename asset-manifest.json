@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/slider/static/css/main.afbcba18.css",
+    "main.js": "/slider/static/js/main.fc31c438.js",
+    "static/js/213.88fc478e.chunk.js": "/slider/static/js/213.88fc478e.chunk.js",
+    "static/js/732.6fbccbfb.chunk.js": "/slider/static/js/732.6fbccbfb.chunk.js",
+    "static/js/453.f6505ab9.chunk.js": "/slider/static/js/453.f6505ab9.chunk.js",
+    "static/media/OKKanmani.mp3": "/slider/static/media/OKKanmani.494f8943e7399edbddbe.mp3",
+    "static/media/Signature.png": "/slider/static/media/Signature.f53ab839d4b6ab295a8b.png",
+    "static/media/lego-batman.mp4": "/slider/static/media/lego-batman.7eb802ab82854a765fdc.mp4",
+    "static/media/loader3.png": "/slider/static/media/loader3.7dd271269ac4e46a9fd5.png",
+    "static/media/ShakingHands.png": "/slider/static/media/ShakingHands.751d914fdec35f1b05d5.png",
+    "static/media/loader1.png": "/slider/static/media/loader1.34b53d25db7b176407f6.png",
+    "static/media/loader2.png": "/slider/static/media/loader2.8bc790e56e1d9caa37e8.png",
+    "static/media/blackCat.png": "/slider/static/media/blackCat.4e767f04bffc7f5ebd24.png",
+    "static/media/clickHere.png": "/slider/static/media/clickHere.f4c4a661b4fc8503dece.png",
+    "static/media/angryLuvey.png": "/slider/static/media/angryLuvey.7162b67b5973a3704c29.png",
+    "static/media/slick.svg": "/slider/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/slider/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/slider/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/slider/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/slider/index.html",
+    "main.afbcba18.css.map": "/slider/static/css/main.afbcba18.css.map",
+    "main.fc31c438.js.map": "/slider/static/js/main.fc31c438.js.map",
+    "213.88fc478e.chunk.js.map": "/slider/static/js/213.88fc478e.chunk.js.map",
+    "732.6fbccbfb.chunk.js.map": "/slider/static/js/732.6fbccbfb.chunk.js.map",
+    "453.f6505ab9.chunk.js.map": "/slider/static/js/453.f6505ab9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afbcba18.css",
+    "static/js/main.fc31c438.js"
+  ]
+}
