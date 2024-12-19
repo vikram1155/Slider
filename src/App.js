@@ -23,7 +23,7 @@ import CustomButton from "./usableComponents/CustomButton";
 
 function Layout({ children }) {
   const navigate = useNavigate();
-  console.log("a-c", children.type.name);
+  console.log("a-c", children);
   return (
     <Box
       sx={{
@@ -38,7 +38,9 @@ function Layout({ children }) {
     >
       {children}
       {children.type.name !== "Loader" &&
-        children.type.name !== "PasswordCheck" && (
+        children.type.name !== "PasswordCheck" &&
+        children.type.name !== "ia" &&
+        children.type.name !== "ns" && (
           <Box
             sx={{
               width: "100%",
