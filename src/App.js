@@ -23,6 +23,7 @@ import CustomButton from "./usableComponents/CustomButton";
 
 function Layout({ children }) {
   const navigate = useNavigate();
+  console.log("a-c", children.type.name);
   return (
     <Box
       sx={{
